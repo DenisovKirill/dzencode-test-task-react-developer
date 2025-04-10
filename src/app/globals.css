@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --inset-shadow-left: inset 8px 0 6px -6px rgba(0, 0, 0, 0.1);
+  --inset-shadow-default: inset 0px 0px 9px 0px rgba(0,0,0,0.15);
+  --shadow-default: 0px 0px 12px 0px rgba(0,0,0,0.25);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  transition-property: opacity, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
+
+@layer components {
+  .custom-select {
+    @apply appearance-none bg-no-repeat;
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position:
+      calc(100% - 20px) 0.85em,
+      calc(100% - 15px) 0.85em;
+    background-size:
+      5px 5px,
+      5px 5px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out both;
+  }
+
+
+  .page-transition {
+    opacity: 0;
+    transform: translateX(100px);
+    filter: blur(8px);
+  }
+
+  .order-info-enter {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+    filter: blur(8px);
+  }
+
+  .order-info-enter-active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
 }
