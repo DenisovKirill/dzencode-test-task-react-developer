@@ -11,7 +11,7 @@ type ModalProps = {
 };
 
 export const Modal = ({ triggerIcon, modalTitle, modalContent, onApplyAction }: ModalProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <>
