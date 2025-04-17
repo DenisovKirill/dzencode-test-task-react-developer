@@ -23,27 +23,36 @@ cd dzencode-test-task-react-developer
 npm install
 ```
 
-### 3. Run the development server
+### 3. Configure Environment Variables
+A sample file .env.example is provided. Create your own .env file:
+```bash
+cp .env.example .env.local
+```
+The actual environment variable values (e.g. Supabase credentials) will be shared with you privately.
+
+### 4. Run the development server
 ```bash
 npm run dev
 ```
 Open http://localhost:3000 in your browser to see the app.
 
+### 5. (Optional) Reset the database
+
+If needed, you can reset and seed the database using the following command:
+
+```bash
+npm run reset-db
+```
+
 ## Docker Setup
-### Build the Docker image
+### 1. Build the Docker image
 ```bash
 docker build -t nextjs-app .
 ```
 
-### Run the Docker container
+### 2. Run the Docker container
 ```bash
 docker run -p 3000:3000 nextjs-app
-```
-
-## Environment Variables
-A sample file .env.example is provided. Create your own .env file:
-```bash
-cp .env.example .env
 ```
 
 ## Database
