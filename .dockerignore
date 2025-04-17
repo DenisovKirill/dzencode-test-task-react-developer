@@ -1,0 +1,16 @@
+# git
+.git/
+.gitignore
+.gitlab-ci.yml
+README.md
+
+# docker
+.dockerignore
+Dockerfile
+
+# node
+node_modules/
+package-lock.json
+
+# logs
+/*.log*

@@ -40,7 +40,7 @@ export const SessionCounter = () => {
         },
       )}
     >
-      <h2 className="text-lg">Active sessions: {count ?? '—'}</h2>
+      <h2 className="text-lg">Active sessions: {count ?? '...'}</h2>
     </div>
   );
 };
