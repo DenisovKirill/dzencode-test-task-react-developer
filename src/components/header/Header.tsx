@@ -3,7 +3,7 @@ import { DateTime, TextInput, SessionCounter } from '@/components';
 
 export const Header = () => {
   return (
-    <header className="h-16 bg-white flex items-center justify-between px-64">
+    <header className="h-16 bg-blue-100 flex items-center justify-between px-64 fixed top-0 left-0 right-0 z-50">
       <div className="flex items-center gap-20">
         <div className="flex items-center gap-2">
           <Image src="/images/user-shield.png" alt="User shield" priority width={40} height={40} />

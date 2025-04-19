@@ -34,7 +34,7 @@ export const SessionCounter = () => {
   return (
     <div
       className={clsx(
-        'bg-green-500 text-white p-4 rounded font-semibold transition-all duration-300',
+        'bg-green-500 text-white px-4 py-2 rounded font-semibold transition-all duration-300',
         {
           'animate-pulse bg-green-600 scale-105': isBlinking,
         },

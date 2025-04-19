@@ -31,7 +31,7 @@ const RootLayout = ({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="flex grow overflow-hidden justify-center">
+        <main className="flex grow overflow-hidden justify-center pt-16 pl-64">
           <SideBar />
           <section className="grow py-10 px-20 overflow-y-auto inset-shadow-left bg-gray-100">
             {children}
